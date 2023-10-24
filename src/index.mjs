@@ -39,13 +39,13 @@
 // console.log(arr3);
 
 //配列のコピー、結合
-const arr4 = [10, 20];
-const arr5 = [30, 40];
+// const arr4 = [10, 20];
+// const arr5 = [30, 40];
 
-const arr6 = [...arr4];
-arr6[0] = 1000;
-console.log(arr4);
-console.log(arr6);
+// const arr6 = [...arr4];
+// arr6[0] = 1000;
+// console.log(arr4);
+// console.log(arr6);
 
 // const arr7 = [...arr4, ...arr5];
 // console.log(arr7);
@@ -54,3 +54,52 @@ console.log(arr6);
 // arr8[0] = 100;
 // console.log(arr4);
 // console.log(arr8);
+
+/**
+ * mapやfilterを使った配列の処理
+ */
+// const nameArr = ["ルフィ", "ゾロ", "サンジ"];
+// for (let index = 0; index < nameArr.length; index++) { //従来のfor構文の例
+//     console.log(`${index + 1}番目は${nameArr[index]}です`);
+// }
+
+// const nameArr2 = nameArr.map((name) => {
+//     return name;
+// })
+// console.log(nameArr2);
+
+// nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`));
+
+// const numArr = [1, 2, 3, 4, 5];
+// const newNumArr = numArr.filter((num) => {
+//     return num % 2 === 1;
+// });
+// console.log(newNumArr)
+
+// const NewNameArr = nameArr.map((name) => {
+//     if (name === "ルフィ") {
+//         return `${name}船長`
+//     } else {
+//         return name
+//     }
+// });
+// console.log(NewNameArr);
+
+/**
+ * 三項演算子
+ */
+//ある条件 ? 条件がtrueの時 : 条件がfalseの時
+// const val1 = 1 < 0 ? 'tureです' : 'falseです';
+// console.log(val1);
+
+//toLocaleStringは数字を三桁区切りで,を入れてくれる関数
+// const num = 13000;
+// // console.log(num.toLocaleString());
+// // typeof その変数の型が何なのかを判別してくれる
+// const formattedNum = typeof num === 'number' ? num.toLocaleString() : '数値を入力してください';
+// console.log(formattedNum);
+
+const checkSum = (num1, num2) => {
+    return num1 + num2 > 100 ? '100超えています!!' : '許容範囲内です';
+}
+console.log(checkSum(30, 78));
